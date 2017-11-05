@@ -4,10 +4,18 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 // 1.2 安装路由
 Vue.use(VueRouter)
+// 导入格式化时间的插件
+import moment from "moment"
+// 定义全局的过滤器
+Vue.filter("dateFormat",function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
+	return moment(dataStr).format(pattern)
+})
 // 2.1 导入vue-resource
 import VueResource from "vue-resource"
 // 2.2 安装 vue-resource
 Vue.use(VueResource)
+// 设置请求的根路径
+Vue.http.options.root="http://vue.studyit.io"
 // 导入MUI的样式
 import "./lib/mui/css/mui.min.css"
 // 导入拓展图标的样式
@@ -16,11 +24,13 @@ import "./lib/mui/css/icons-extra.css"
 import {
 	Header,
 	Swipe,
-	SwipeItem
+	SwipeItem,
+	Button
 } from "mint-ui"
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(Button.name,Button)
 // 1.3 导入自己的router.js路由模块
 import router from "./router.js"
 // 导入App根组件
