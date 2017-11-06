@@ -51,7 +51,7 @@
 		}
 		.mui-ellipsis{
 			font-size:12px;
-			color:#225aff;
+			color:#226aff;
 			display:flex;
 			justify-content:space-between;
 		}
