@@ -27,12 +27,14 @@ import "./lib/mui/css/icons-extra.css"
 // 	Header,
 // 	Swipe,
 // 	SwipeItem,
-// 	Button
+// 	Button,
+//      Lazyload
 // } from "mint-ui"
 // Vue.component(Header.name, Header)
 // Vue.component(Swipe.name, Swipe)
 // Vue.component(SwipeItem.name, SwipeItem)
 // Vue.component(Button.name,Button)
+// Vue.use(Lazyload);
 import MintUI from "mint-ui"
 Vue.use(MintUI)
 import "mint-ui/lib/style.css"
